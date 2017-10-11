@@ -1,0 +1,31 @@
+language: android
+
+env:
+  global:
+    - ADB_INSTALL_TIMEOUT=5
+
+android:
+  components:
+    - tools
+    - platform-tools
+
+jdk:
+  - oraclejdk8
+
+before_install: ./cmds/ci/before_install.sh
+
+install: ./cmds/ci/install.sh
+
+before_script: ./cmds/ci/before_script.sh
+
+script: ./cmds/ci/run_test.sh
+
+notifications:
+  email: false
+
+sudo: false
+
+cache:
+  directories:
+    - $HOME/.gradle
+    - $HOME/.android/build-cache

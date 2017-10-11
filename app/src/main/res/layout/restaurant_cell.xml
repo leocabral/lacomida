@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="wrap_content"
+	android:foreground="?android:attr/selectableItemBackground"
+	android:gravity="center_horizontal"
+	android:orientation="vertical"
+	android:padding="@dimen/activity_default_margin">
+
+	<com.facebook.drawee.view.SimpleDraweeView
+		android:id="@+id/restaurant_image"
+		android:layout_width="100dp"
+		android:layout_height="100dp"
+		android:scaleType="fitCenter"
+		app:placeholderImage="@drawable/splash_image"
+		app:roundAsCircle="true" />
+
+	<android.support.v7.widget.AppCompatRatingBar
+		android:id="@+id/restaurant_rating"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:clickable="false"
+		android:focusable="false"
+		android:max="5" />
+
+	<TextView
+		android:id="@+id/restaurant_name"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		tools:text="Pizzaria" />
+
+	<TextView
+		android:id="@+id/restaurant_description"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:gravity="center"
+		tools:text="A melhor pizzaria" />
+
+	<TextView
+		android:id="@+id/restaurant_address"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		tools:text="Rua Taubaté, 641" />
+
+	<TextView
+		android:id="@+id/restaurant_delivery_fee"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		tools:text="Taxa de entrega: R$ 5" />
+</LinearLayout>

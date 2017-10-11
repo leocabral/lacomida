@@ -1,0 +1,27 @@
+[
+  {
+    "id": 1,
+    "name": "Vale refeição - Sodexo",
+    "enabled": true
+  },
+  {
+    "id": 2,
+    "name": "Vale refeição - Visa Vale",
+    "enabled": false
+  },
+  {
+    "id": 3,
+    "name": "Dinheiro",
+    "enabled": true
+  },
+  {
+    "id": 4,
+    "name": "Cartão de crédito - Maquininha",
+    "enabled": true
+  },
+  {
+    "id": 5,
+    "name": "Cartão de débito - Maquininha",
+    "enabled": false
+  }
+]

@@ -1,0 +1,87 @@
+buildscript {
+
+    ext.versions = [
+            'compileSdk'    : 26,
+            'buildTools'    : '26.0.1',
+            'minSdk'        : 17,
+            'targetSdk'     : 26,
+            'kotlinVersion' : '1.1.4-3',
+
+            'supportLibrary': '26.1.0',
+            'errorProne'    : '2.1.1',
+            'butterknife'   : '8.8.1',
+            'rxAndroid'     : '2.0.1',
+            'rxJava'        : '2.1.1',
+            'parceler'      : '1.1.9',
+            'jUnit'         : '4.12',
+            'fresco'        : '1.5.0',
+            'espresso'      : '3.0.1',
+            'retrofit'      : '2.3.0',
+            'testRunner'    : '1.0.1'
+    ]
+
+    ext.deps = [
+            'support'              : [
+                    'appCompat'     : "com.android.support:appcompat-v7:${versions.supportLibrary}",
+                    'vectorDrawable': "com.android.support:support-vector-drawable:${versions.supportLibrary}",
+                    'design'        : "com.android.support:design:${versions.supportLibrary}",
+                    'annotations'   : "com.android.support:support-annotations:${versions.supportLibrary}"
+            ],
+            'kotlinJre'            : "org.jetbrains.kotlin:kotlin-stdlib-jre8:${versions.kotlinVersion}",
+            'errorProneAnnotations': "com.google.errorprone:error_prone_annotations:${versions.errorProne}",
+            'butterknife'          : [
+                    'lib': "com.jakewharton:butterknife:${versions.butterknife}",
+                    'apt': "com.jakewharton:butterknife-compiler:${versions.butterknife}"
+            ],
+            'rx'                   : [
+                    'java'   : "io.reactivex.rxjava2:rxjava:${versions.rxJava}",
+                    'android': "io.reactivex.rxjava2:rxandroid:${versions.rxAndroid}"
+            ],
+            'fresco'               : "com.facebook.fresco:fresco:${versions.fresco}",
+            'parceler'             : [
+                    'lib': "org.parceler:parceler-api:${versions.parceler}",
+                    'apt': "org.parceler:parceler:${versions.parceler}"
+            ],
+            'retrofit'             : [
+                    'lib'          : "com.squareup.retrofit2:retrofit:${versions.retrofit}",
+                    'rxAdapter'    : "com.squareup.retrofit2:adapter-rxjava2:${versions.retrofit}",
+                    'gsonConverter': "com.squareup.retrofit2:converter-gson:${versions.retrofit}"
+            ],
+            'gson'                 : 'com.google.code.gson:gson:2.8.2',
+            'test'                 : [
+                    'espresso': [
+                            'core'      : "com.android.support.test.espresso:espresso-core:${versions.espresso}",
+                            'contrib'   : "com.android.support.test.espresso:espresso-contrib:${versions.espresso}",
+                            'intents'   : "com.android.support.test.espresso:espresso-intents:${versions.espresso}",
+                            'concurrent': "com.android.support.test.espresso.idling:idling-concurrent:${versions.espresso}"
+                    ],
+                    'runner'  : "com.android.support.test:runner:${versions.testRunner}",
+                    'rules'   : "com.android.support.test:rules:${versions.testRunner}",
+                    'jUnit'   : "junit:junit:${versions.jUnit}",
+            ]
+    ]
+
+    repositories {
+        google()
+        jcenter()
+        maven {
+            url 'https://plugins.gradle.org/m2'
+        }
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:3.0.0-beta6'
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:${versions.kotlinVersion}"
+        classpath 'net.ltgt.gradle:gradle-errorprone-plugin:0.0.11'
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        jcenter()
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}

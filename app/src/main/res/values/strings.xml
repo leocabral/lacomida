@@ -1,0 +1,17 @@
+<resources>
+	<string name="app_name">La Comida</string>
+	<string name="home_title">Home</string>
+	<string name="cart">Meu carrinho</string>
+	<string name="location_disclaimer">Precisamos da sua localização para mostrar a lista de restaurantes, ok?</string>
+	<string name="allow">Permitir</string>
+	<string name="unknown_error">Ops! Parece que algo está errado, tente refazer esta ação mais tarde.</string>
+	<string name="delivery_fee">Taxa de entrega: %1$s</string>
+	<string name="add_to_chart">Add ao carrinho</string>
+	<string name="product_added_to_cart">Produto adicionado ao carrinho</string>
+	<string name="my_cart">Meu carrinho</string>
+	<string name="plate_quantity">Quantidade: %1$d</string>
+	<string name="total_price">Preço total: %1$s</string>
+	<string name="remove">Remover</string>
+	<string name="empty_cart">Carrinho vazio</string>
+	<string name="checkout">Checkout</string>
+</resources>

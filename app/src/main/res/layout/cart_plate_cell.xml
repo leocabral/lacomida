@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="wrap_content"
+	android:gravity="center_horizontal"
+	android:orientation="vertical"
+	android:padding="@dimen/activity_default_margin">
+
+	<com.facebook.drawee.view.SimpleDraweeView
+		android:id="@+id/cart_plate_image"
+		android:layout_width="75dp"
+		android:layout_height="75dp"
+		android:scaleType="fitCenter"
+		app:placeholderImage="@drawable/splash_image"
+		app:roundAsCircle="true" />
+
+	<TextView
+		android:id="@+id/cart_plate_name"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		tools:text="Pizza" />
+
+	<TextView
+		android:id="@+id/cart_plate_quantity"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		tools:text="Quantidade: 5" />
+
+	<TextView
+		android:id="@+id/cart_plate_price"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		tools:text="R$ 34,50" />
+
+	<android.support.v7.widget.AppCompatButton
+		android:id="@+id/cart_plate_remove_button"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:text="@string/remove" />
+</LinearLayout>

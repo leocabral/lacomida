@@ -1,0 +1,11 @@
+[
+  {
+    "id": 1,
+    "name": "Pizzaria",
+    "imageUrl": "",
+    "description": "A melhor pizzaria",
+    "address": "Rua Taubaté, 641",
+    "rating": 4.5,
+    "deliveryFee": 5
+  }
+]

@@ -1,0 +1,16 @@
+[
+  {
+    "id": 1,
+    "name": "Pizza de Calabresa",
+    "imageUrl": "",
+    "description": "Mussarela, molho de tomate, calabresa fatiada, cebola e azeitonas pretas",
+    "price": 34.5
+  },
+  {
+    "id": 2,
+    "name": "Pizza de Marguerita",
+    "imageUrl": "",
+    "description": "Mussarela, molho de tomate, manjericão, azeitonas pretas",
+    "price": 32.99
+  }
+]
