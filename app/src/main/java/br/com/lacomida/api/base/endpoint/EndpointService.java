@@ -10,7 +10,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 public class EndpointService {
 
 	private static final Object MUTEX = new Object();
-	private static final String BASE_URL = "xxx";
+	private static final String BASE_URL = "https://demo1531977.mockable.io/";
 
 	private Retrofit retrofit;
 	private Map<String, Object> endpoints = new HashMap<>();
