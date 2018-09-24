@@ -14,16 +14,17 @@ jobs:
     steps:
       - checkout
 
-      # Download and cache dependencies
       - restore_cache:
           keys:
           - v1-dependencies-{{ checksum "build.gradle" }}
 
-      - run: ./gradlew dependencies
+      - run: ./cmds/ci/before_install.sh
+
+      - run: ./cmds/ci/install_deps.sh
 
       - save_cache:
           paths:
             - ~/.gradle
           key: v1-dependencies-{{ checksum "build.gradle" }}
 
-      - run: ./gradlew test
+      - run: ./cmds/ci/install.sh
